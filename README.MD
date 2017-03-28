@@ -1,0 +1,1 @@
+This is a script to take an ubuntu live cd and use it to completely wipe a hard drive with aes-256-CTR data. The script with enable the universe repo, install pv for a progress bar, get the size of the drive for pv, then wipe the drive.
