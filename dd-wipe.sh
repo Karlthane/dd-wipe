@@ -11,6 +11,6 @@ add-apt-repository universe
 apt-get update
 apt-get -y install pv
 disk_size=$(blockdev --getsize64 /dev/sda)
- openssl enc -aes-256-ctr -pass pass:"$(dd if=/dev/urandom bs=128 count=1 2>/dev/null | base64)" -nosalt </dev/zero \
+openssl enc -aes-256-ctr -pass pass:"$(dd if=/dev/urandom bs=128 count=1 2>/dev/null | base64)" -nosalt </dev/zero \
     | pv -bartpes $disk_size | dd bs=64K of=/dev/sda
     
